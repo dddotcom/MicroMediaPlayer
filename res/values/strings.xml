@@ -4,5 +4,10 @@
     <string name="app_name">MicroMediaPlayer</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="stop">Stop</string>
+    <string name="desired_bpm">Desired BPM:</string>
+    <string name="init_song">No song currently playing...</string>
+    <string name="init_bpm">BPM: 0</string>
+    
 
 </resources>

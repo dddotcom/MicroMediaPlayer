@@ -2,85 +2,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@android:color/black"
-    tools:context=".MainActivity"
-     >
+    tools:context=".MainActivity" >
+    
+    
 
-<!--      
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="145dp" >
-
-        <RadioButton
-            android:id="@+id/song1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Pirates"
-            android:textColor="@android:color/white" /> 
-           
-        <RadioButton
-            android:id="@+id/song2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ninjas"
-            android:textColor="@android:color/white" />
-
-        <RadioButton
-            android:id="@+id/song3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Oh my! "
-            android:textColor="@android:color/white" />
-
-    </RadioGroup>
-     -->
-
-    <TextView
-        android:id="@+id/songTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/BPMvalue"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="26dp"
-        android:text="No song currently playing..."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:id="@+id/desiredBPMInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
-        android:text="DesiredBPM:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:textSize="40dp" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/songTitle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="@android:color/black" >
-
-        <requestFocus />
-    </EditText>
 
     <Button
         android:id="@+id/stop"
@@ -90,33 +20,57 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="58dp"
         android:onClick="onClick"
-        android:text="Stop"
+        android:text="@string/stop"
         android:textColor="@android:color/black"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/BPMvalue"
+        android:id="@+id/desiredBPMInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/stop"
-        android:layout_marginBottom="30dp"
-        android:layout_toRightOf="@+id/stop"
-        android:text="0"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/desired_bpm"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desiredBPMInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@android:color/black" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BPM"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:text="@string/init_song"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/BPM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/BPMvalue"
-        android:layout_alignBottom="@+id/BPMvalue"
-        android:layout_alignLeft="@+id/songTitle"
-        android:layout_marginLeft="14dp"
-        android:text="BPM:"
+        android:layout_above="@+id/stop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
+        android:text="@string/init_bpm"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
 </RelativeLayout>

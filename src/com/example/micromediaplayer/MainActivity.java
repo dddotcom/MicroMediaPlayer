@@ -19,7 +19,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
-import android.widget.Toast;
+//import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -27,14 +27,14 @@ public class MainActivity extends Activity {
 	Button stop;
 	MediaPlayer player;
 	RadioGroup radioGroup1;
-	TextView BPM, BPMvalue, songTitle;
+	TextView BPM, /*BPMvalue,*/ songTitle;
 	
 	EditText bpmInput;
 	
 	Integer closest= -1;
 	ArrayList<Integer> bpmArray = new ArrayList<Integer>(Arrays.asList(130,125,119, 30, 60, 90));
 	ArrayList<String> songTitleArray = new ArrayList<String>(Arrays.asList("Bang Bang - will.i.am",
-			"All We Got - Fergie", "Lost Yourself to Dance - Daft Punk ", "jt", "mirrors", "that girl"));
+			"All We Got - Fergie", "Lose Yourself to Dance - Daft Punk ", "jt", "mirrors", "that girl"));
 	ArrayList<Integer> mp3Array = new ArrayList<Integer>(Arrays.asList(R.raw.allwegot, R.raw.bangbang, R.raw.givelife,
 			R.raw.jt, R.raw.mirrors, R.raw.thatgirl)); 
 			
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 		
 		//text views 
 		BPM = (TextView) findViewById(R.id.BPM);
-		BPMvalue = (TextView) findViewById(R.id.BPMvalue);
+		//BPMvalue = (TextView) findViewById(R.id.BPMvalue);
 		songTitle = (TextView) findViewById(R.id.songTitle);
 		bpmInput = (EditText) findViewById(R.id.editText1);
 		
@@ -149,7 +149,7 @@ public class MainActivity extends Activity {
 		player.stop();
 		player = MediaPlayer.create(MainActivity.this, mp3Array.get(index));
 		player.start();
-		BPMvalue.setText(bpmArray.get(index) + "");
+		BPM.setText("BPM: " + bpmArray.get(index) + "");
 		songTitle.setText(songTitleArray.get(index));
 	}
 	
