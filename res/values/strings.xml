@@ -8,6 +8,9 @@
     <string name="desired_bpm">Desired BPM:</string>
     <string name="init_song">No song currently playing...</string>
     <string name="init_bpm">BPM: 0</string>
+    <string name="bt_on">BT on</string>
+    <string name="bt_off">BT off</string>
+    <string name="paired_devices">Pair</string>
     
 
 </resources>
